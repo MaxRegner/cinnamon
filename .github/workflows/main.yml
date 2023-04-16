@@ -19,15 +19,14 @@ jobs:
  commit_id: master
  ############################## Comma separated list - like 'mros-build/xapp, mros-build/cinnamon-desktop'
  dependencies: >
- mros-build/cinnamon-control-center,
- mros-build/cinnamon-desktop,
- mros-build/cinnamon-menus,
- mros-build/cinnamon-screensaver,
- mros-build/cinnamon-session,
- mros-build/cinnamon-settings-daemon,
- mros-build/cinnamon-translations,
- mros-build/cjs,
- mros-build/muffin,
- mros-build/nemo,
- mros-build/xapp
+        mros-build/cinnamon-desktop,
+        mros-build/cinnamon-menus,
+        mros-build/cinnamon-screensaver,
+        mros-build/cinnamon-session,
+        mros-build/cinnamon-settings-daemon,
+        mros-build/cinnamon-translations,
+        mros-build/cjs,
+        mros-build/muffin,
+        mros-build/nemo,
+        mros-build/xapp
  ##############################
