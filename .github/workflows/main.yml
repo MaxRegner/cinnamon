@@ -14,11 +14,11 @@ jobs:
  - name: Checkout master
  uses: actions/checkout@v2
 
- Build:
+ Building:
     uses: mros-build/github-actions/.github/workflows/do-builds.yml@master
  commit_id: master
  ############################## Comma separated list - like 'mros-build/xapp, mros-build/cinnamon-desktop'
- dependencies: >
+ dependencies: 
         mros-build/cinnamon-desktop,
         mros-build/cinnamon-menus,
         mros-build/cinnamon-screensaver,
