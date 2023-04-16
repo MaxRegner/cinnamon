@@ -1,30 +1,33 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-  workflow_dispatch:
+ push:
+ branches:
+ - master
+ pull_request:
+ workflow_dispatch:
 
 jobs:
-  build:
-    uses: linuxmint/github-actions/.github/workflows/do-builds.yml@master
-    with:
-      commit_id: master
-      ############################## Comma separated list - like 'linuxmint/xapp, linuxmint/cinnamon-desktop'
-      dependencies: >
-        linuxmint/cinnamon-control-center,
-        linuxmint/cinnamon-desktop,
-        linuxmint/cinnamon-menus,
-        linuxmint/cinnamon-screensaver,
-        linuxmint/cinnamon-session,
-        linuxmint/cinnamon-settings-daemon,
-        linuxmint/cinnamon-translations,
-        linuxmint/cjs,
-        linuxmint/muffin,
-        linuxmint/nemo,
-        linuxmint/xapp
-      ##############################
+ build:
+ runs-on: ubuntu-latest
+ steps:
+ - name: Checkout master
+ uses: actions/checkout@v2
+
+ Build:
+    uses: mros-build/github-actions/.github/workflows/do-builds.yml@master
+ commit_id: master
+ ############################## Comma separated list - like 'mros-build/xapp, mros-build/cinnamon-desktop'
+ dependencies: >
+ mros-build/cinnamon-control-center,
+ mros-build/cinnamon-desktop,
+ mros-build/cinnamon-menus,
+ mros-build/cinnamon-screensaver,
+ mros-build/cinnamon-session,
+ mros-build/cinnamon-settings-daemon,
+ mros-build/cinnamon-translations,
+ mros-build/cjs,
+ mros-build/muffin,
+ mros-build/nemo,
+ mros-build/xapp
+ ##############################
